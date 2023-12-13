@@ -1,0 +1,15 @@
+//curl -X POST -H 'Content-Type: application/json' -d '{"pagination":{"skip":"0","limit":"10"}}' 'http://localhost:3000/api/colegio_relaciones/estructura/materia_api/'
+//curl -X POST -H 'Content-Type: application/json' -d '{"pagination":{"skip":"0","limit":"10"}}' 'http://localhost:3000/api/colegio_relaciones/estructura/materia_api/index/'
+//curl -X POST -H 'Content-Type: application/json' -d '{"pagination":{"skip":"0","limit":"10"}}' 'http://localhost:3000/api/colegio_relaciones/estructura/materia_api/todos/'
+
+//curl -X POST -H 'Content-Type: application/json' -d '{"id":"8"}' 'http://localhost:3000/api/metricas_auto/general/seleccionar/'
+
+
+
+curl -X POST -H 'Content-Type: application/json' 'http://localhost:3000/colegio_laravel/api/colegio_relaciones/estructura/materia_api' -d '
+{
+    "pagination":{
+                    "skip": 0,
+                    "limit": 10
+                }
+}';

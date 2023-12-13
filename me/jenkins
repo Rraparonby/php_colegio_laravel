@@ -1,0 +1,63 @@
+--------------------------------------- SI VALE ------------------------------
+
+pipeline {
+  agent {
+    docker { 
+	    image '56009827e355'
+	    args '-p 3001:80 --network network_colegio -v /home/datos/proyectos/2013_2020/source_php/colegio_relaciones/01_colegio_relaciones_docker/02_colegio_laravel/02_code/:/var/www/html/'
+    }
+  }
+  stages {
+    stage('Test') {
+      steps {
+        sh 'pwd'
+        sh 'cd /var/www/html/colegio_laravel/ && php artisan test --testsuite Unit'
+        sh 'pwd'
+      }
+    }
+  }
+}
+
+
+--------------------------------------- NO VALE ------------------------------
+pipeline {
+  agent {
+    docker { 
+	    image '56009827e355'
+	    args '-p 3001:80 --network network_colegio -v /home/datos/proyectos/2013_2020/source_php/colegio_relaciones/01_colegio_relaciones_docker/02_colegio_laravel/02_code/:/var/www/html/'
+    }
+  }
+  stages {
+    stage('Test') {
+      steps {
+        sh 'cd /var/www/html/colegio_laravel'
+        sh 'php artisan test --testsuite Unit'
+      }
+    }
+  }
+}
+
+---------------------------------------- NO VALE--------------------------------------
+
+pipeline {
+  agent {
+    docker { 
+	    image '56009827e355'
+	    args '-p 3000:80'
+	    args '--network network_colegio'
+	    args '-v /home/datos/proyectos/2013_2020/source_php/colegio_relaciones/01_colegio_relaciones_docker/02_colegio_laravel/02_code/:/var/www/html/'
+    }
+  }
+  stages {
+    stage('Test') {
+      steps {
+        sh 'cd /var/www/html/colegio_laravel'
+        sh 'php artisan test --testsuite Unit'
+      }
+    }
+  }
+}
+
+------------------------------------------------------------------------
+
+

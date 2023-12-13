@@ -1,0 +1,41 @@
+----------------------------------- INFO -----------------------------
+
+--- TYPES ---
+
+1.- Listen for Xdebug (General ???)
+2.- Launch currently open script (Php File Script)
+3.- Launch Built-in web server (Php Web Server)
+
+----------------------------------- PROCESS ----------------------------
+
+1) Run and Debug
+
+2) Launch Built-in Web Server
+
+    
+    {
+        "name": "Launch Built-in web server",
+        "type": "php",
+        "request": "launch",
+        "runtimeArgs": [
+            "-dxdebug.mode=debug",
+            "-dxdebug.start_with_request=yes",
+            "-S",
+            "localhost:3000",
+            "-t",
+            "public"
+        ],
+        "program": "",
+        "cwd": "${workspaceRoot}",
+        "port": 9003,
+        "serverReadyAction": {
+            "pattern": "Development Server \\(http://localhost:([0-9]+)\\) started",
+            "uriFormat": "http://localhost:%s",
+            "action": "openExternally"
+        }
+    }
+
+-------------- TALVEZ -----------------
+
+Url
+    ?XDEBUG_SESSION_START=1

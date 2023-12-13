@@ -1,0 +1,1 @@
+sed -i -e 's/\r$//' 04_shell_curl_commands.sh

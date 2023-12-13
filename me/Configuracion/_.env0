@@ -1,0 +1,20 @@
+//----------------------- PATH: .env -----------------------
+
+APP_NAME=Lumen_colegio_relaciones
+APP_ENV=local
+APP_KEY=sdaffsdgfsdhb
+
+APP_DEBUG=true
+APP_URL=http://localhost
+APP_TIMEZONE=UTC
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=2015_colegio_relaciones
+DB_USERNAME=root
+DB_PASSWORD=root
+
+CACHE_DRIVER=file
+QUEUE_CONNECTION=sync
+

@@ -1,0 +1,236 @@
+use App\Http\Controllers\Api\Estructura\AlumnoApiController;
+use App\Http\Controllers\Api\Estructura\AlumnoMateriaApiController;
+use App\Http\Controllers\Api\Financiero\ContratoApiController;
+use App\Http\Controllers\Api\Estructura\DocenteApiController;
+use App\Http\Controllers\Api\Estructura\DocenteMateriaApiController;
+use App\Http\Controllers\Api\Estructura\MateriaApiController;
+use App\Http\Controllers\Api\Proceso\MatriculaApiController;
+use App\Http\Controllers\Api\Proceso\NotaApiController;
+use App\Http\Controllers\Api\Financiero\PensionApiController;
+use App\Http\Controllers\Api\Financiero\SueldoApiController;
+
+use App\Lib\Base\Util\Constantes;
+
+
+Route::prefix(AlumnoApiController::$ROUTE)->group(function () {
+	
+	Route::post(Constantes::$DEFAULT,[AlumnoApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$INDEX,[AlumnoApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$TODOS,[AlumnoApiController::class,Constantes::$GET_TODOS]);	
+	
+	Route::post(Constantes::$BUSCAR,[AlumnoApiController::class,Constantes::$GET_BUSCAR]);	
+	Route::post(Constantes::$SELECCIONAR, [AlumnoApiController::class, Constantes::$GET_SELECCIONAR]);
+	
+	Route::post(Constantes::$NUEVO,[AlumnoApiController::class,Constantes::$SNUEVO]);
+	Route::put(Constantes::$ACTUALIZAR,[AlumnoApiController::class,Constantes::$SACTUALIZAR]);
+	Route::delete(Constantes::$ELIMINAR,[AlumnoApiController::class,Constantes::$SELIMINAR]);
+	
+	Route::post(Constantes::$NUEVO.'s',[AlumnoApiController::class,Constantes::$SNUEVOS]);
+	Route::delete(Constantes::$ELIMINAR.'s',[AlumnoApiController::class,Constantes::$SELIMINARS]);
+	Route::put(Constantes::$ACTUALIZAR.'s',[AlumnoApiController::class,Constantes::$SACTUALIZARS]);	
+	Route::post(Constantes::$GUARDAR_CAMBIOS,[AlumnoApiController::class,Constantes::$SGUARDAR_CAMBIOS]);
+	
+	
+	Route::post(Constantes::$TODOS_RELACIONES,[AlumnoApiController::class,Constantes::$GET_TODOS_RELACIONES]);
+	Route::post(Constantes::$SELECCIONAR_RELACIONES, [AlumnoApiController::class, Constantes::$GET_SELECCIONAR_RELACIONES]);	
+});
+
+Route::prefix(AlumnoMateriaApiController::$ROUTE)->group(function () {
+	
+	Route::post(Constantes::$DEFAULT,[AlumnoMateriaApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$INDEX,[AlumnoMateriaApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$TODOS,[AlumnoMateriaApiController::class,Constantes::$GET_TODOS]);	
+	
+	Route::post(Constantes::$BUSCAR,[AlumnoMateriaApiController::class,Constantes::$GET_BUSCAR]);	
+	Route::post(Constantes::$SELECCIONAR, [AlumnoMateriaApiController::class, Constantes::$GET_SELECCIONAR]);
+	
+	Route::post(Constantes::$NUEVO,[AlumnoMateriaApiController::class,Constantes::$SNUEVO]);
+	Route::put(Constantes::$ACTUALIZAR,[AlumnoMateriaApiController::class,Constantes::$SACTUALIZAR]);
+	Route::delete(Constantes::$ELIMINAR,[AlumnoMateriaApiController::class,Constantes::$SELIMINAR]);
+	
+	Route::post(Constantes::$NUEVO.'s',[AlumnoMateriaApiController::class,Constantes::$SNUEVOS]);
+	Route::delete(Constantes::$ELIMINAR.'s',[AlumnoMateriaApiController::class,Constantes::$SELIMINARS]);
+	Route::put(Constantes::$ACTUALIZAR.'s',[AlumnoMateriaApiController::class,Constantes::$SACTUALIZARS]);	
+	Route::post(Constantes::$GUARDAR_CAMBIOS,[AlumnoMateriaApiController::class,Constantes::$SGUARDAR_CAMBIOS]);
+	
+	Route::post(Constantes::$GET_FKS,[AlumnoMateriaApiController::class,Constantes::$SGET_FKS]);
+	
+});
+
+Route::prefix(ContratoApiController::$ROUTE)->group(function () {
+	
+	Route::post(Constantes::$DEFAULT,[ContratoApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$INDEX,[ContratoApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$TODOS,[ContratoApiController::class,Constantes::$GET_TODOS]);	
+	
+	Route::post(Constantes::$BUSCAR,[ContratoApiController::class,Constantes::$GET_BUSCAR]);	
+	Route::post(Constantes::$SELECCIONAR, [ContratoApiController::class, Constantes::$GET_SELECCIONAR]);
+	
+	Route::post(Constantes::$NUEVO,[ContratoApiController::class,Constantes::$SNUEVO]);
+	Route::put(Constantes::$ACTUALIZAR,[ContratoApiController::class,Constantes::$SACTUALIZAR]);
+	Route::delete(Constantes::$ELIMINAR,[ContratoApiController::class,Constantes::$SELIMINAR]);
+	
+	Route::post(Constantes::$NUEVO.'s',[ContratoApiController::class,Constantes::$SNUEVOS]);
+	Route::delete(Constantes::$ELIMINAR.'s',[ContratoApiController::class,Constantes::$SELIMINARS]);
+	Route::put(Constantes::$ACTUALIZAR.'s',[ContratoApiController::class,Constantes::$SACTUALIZARS]);	
+	Route::post(Constantes::$GUARDAR_CAMBIOS,[ContratoApiController::class,Constantes::$SGUARDAR_CAMBIOS]);
+	
+	Route::post(Constantes::$GET_FKS,[ContratoApiController::class,Constantes::$SGET_FKS]);
+	
+});
+
+Route::prefix(DocenteApiController::$ROUTE)->group(function () {
+	
+	Route::post(Constantes::$DEFAULT,[DocenteApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$INDEX,[DocenteApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$TODOS,[DocenteApiController::class,Constantes::$GET_TODOS]);	
+	
+	Route::post(Constantes::$BUSCAR,[DocenteApiController::class,Constantes::$GET_BUSCAR]);	
+	Route::post(Constantes::$SELECCIONAR, [DocenteApiController::class, Constantes::$GET_SELECCIONAR]);
+	
+	Route::post(Constantes::$NUEVO,[DocenteApiController::class,Constantes::$SNUEVO]);
+	Route::put(Constantes::$ACTUALIZAR,[DocenteApiController::class,Constantes::$SACTUALIZAR]);
+	Route::delete(Constantes::$ELIMINAR,[DocenteApiController::class,Constantes::$SELIMINAR]);
+	
+	Route::post(Constantes::$NUEVO.'s',[DocenteApiController::class,Constantes::$SNUEVOS]);
+	Route::delete(Constantes::$ELIMINAR.'s',[DocenteApiController::class,Constantes::$SELIMINARS]);
+	Route::put(Constantes::$ACTUALIZAR.'s',[DocenteApiController::class,Constantes::$SACTUALIZARS]);	
+	Route::post(Constantes::$GUARDAR_CAMBIOS,[DocenteApiController::class,Constantes::$SGUARDAR_CAMBIOS]);
+	
+	
+	Route::post(Constantes::$TODOS_RELACIONES,[DocenteApiController::class,Constantes::$GET_TODOS_RELACIONES]);
+	Route::post(Constantes::$SELECCIONAR_RELACIONES, [DocenteApiController::class, Constantes::$GET_SELECCIONAR_RELACIONES]);	
+});
+
+Route::prefix(DocenteMateriaApiController::$ROUTE)->group(function () {
+	
+	Route::post(Constantes::$DEFAULT,[DocenteMateriaApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$INDEX,[DocenteMateriaApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$TODOS,[DocenteMateriaApiController::class,Constantes::$GET_TODOS]);	
+	
+	Route::post(Constantes::$BUSCAR,[DocenteMateriaApiController::class,Constantes::$GET_BUSCAR]);	
+	Route::post(Constantes::$SELECCIONAR, [DocenteMateriaApiController::class, Constantes::$GET_SELECCIONAR]);
+	
+	Route::post(Constantes::$NUEVO,[DocenteMateriaApiController::class,Constantes::$SNUEVO]);
+	Route::put(Constantes::$ACTUALIZAR,[DocenteMateriaApiController::class,Constantes::$SACTUALIZAR]);
+	Route::delete(Constantes::$ELIMINAR,[DocenteMateriaApiController::class,Constantes::$SELIMINAR]);
+	
+	Route::post(Constantes::$NUEVO.'s',[DocenteMateriaApiController::class,Constantes::$SNUEVOS]);
+	Route::delete(Constantes::$ELIMINAR.'s',[DocenteMateriaApiController::class,Constantes::$SELIMINARS]);
+	Route::put(Constantes::$ACTUALIZAR.'s',[DocenteMateriaApiController::class,Constantes::$SACTUALIZARS]);	
+	Route::post(Constantes::$GUARDAR_CAMBIOS,[DocenteMateriaApiController::class,Constantes::$SGUARDAR_CAMBIOS]);
+	
+	Route::post(Constantes::$GET_FKS,[DocenteMateriaApiController::class,Constantes::$SGET_FKS]);
+	
+});
+
+Route::prefix(MateriaApiController::$ROUTE)->group(function () {
+	
+	Route::post(Constantes::$DEFAULT,[MateriaApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$INDEX,[MateriaApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$TODOS,[MateriaApiController::class,Constantes::$GET_TODOS]);	
+	
+	Route::post(Constantes::$BUSCAR,[MateriaApiController::class,Constantes::$GET_BUSCAR]);	
+	Route::post(Constantes::$SELECCIONAR, [MateriaApiController::class, Constantes::$GET_SELECCIONAR]);
+	
+	Route::post(Constantes::$NUEVO,[MateriaApiController::class,Constantes::$SNUEVO]);
+	Route::put(Constantes::$ACTUALIZAR,[MateriaApiController::class,Constantes::$SACTUALIZAR]);
+	Route::delete(Constantes::$ELIMINAR,[MateriaApiController::class,Constantes::$SELIMINAR]);
+	
+	Route::post(Constantes::$NUEVO.'s',[MateriaApiController::class,Constantes::$SNUEVOS]);
+	Route::delete(Constantes::$ELIMINAR.'s',[MateriaApiController::class,Constantes::$SELIMINARS]);
+	Route::put(Constantes::$ACTUALIZAR.'s',[MateriaApiController::class,Constantes::$SACTUALIZARS]);	
+	Route::post(Constantes::$GUARDAR_CAMBIOS,[MateriaApiController::class,Constantes::$SGUARDAR_CAMBIOS]);
+	
+	
+	Route::post(Constantes::$TODOS_RELACIONES,[MateriaApiController::class,Constantes::$GET_TODOS_RELACIONES]);
+	Route::post(Constantes::$SELECCIONAR_RELACIONES, [MateriaApiController::class, Constantes::$GET_SELECCIONAR_RELACIONES]);	
+});
+
+Route::prefix(MatriculaApiController::$ROUTE)->group(function () {
+	
+	Route::post(Constantes::$DEFAULT,[MatriculaApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$INDEX,[MatriculaApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$TODOS,[MatriculaApiController::class,Constantes::$GET_TODOS]);	
+	
+	Route::post(Constantes::$BUSCAR,[MatriculaApiController::class,Constantes::$GET_BUSCAR]);	
+	Route::post(Constantes::$SELECCIONAR, [MatriculaApiController::class, Constantes::$GET_SELECCIONAR]);
+	
+	Route::post(Constantes::$NUEVO,[MatriculaApiController::class,Constantes::$SNUEVO]);
+	Route::put(Constantes::$ACTUALIZAR,[MatriculaApiController::class,Constantes::$SACTUALIZAR]);
+	Route::delete(Constantes::$ELIMINAR,[MatriculaApiController::class,Constantes::$SELIMINAR]);
+	
+	Route::post(Constantes::$NUEVO.'s',[MatriculaApiController::class,Constantes::$SNUEVOS]);
+	Route::delete(Constantes::$ELIMINAR.'s',[MatriculaApiController::class,Constantes::$SELIMINARS]);
+	Route::put(Constantes::$ACTUALIZAR.'s',[MatriculaApiController::class,Constantes::$SACTUALIZARS]);	
+	Route::post(Constantes::$GUARDAR_CAMBIOS,[MatriculaApiController::class,Constantes::$SGUARDAR_CAMBIOS]);
+	
+	Route::post(Constantes::$GET_FKS,[MatriculaApiController::class,Constantes::$SGET_FKS]);
+	
+});
+
+Route::prefix(NotaApiController::$ROUTE)->group(function () {
+	
+	Route::post(Constantes::$DEFAULT,[NotaApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$INDEX,[NotaApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$TODOS,[NotaApiController::class,Constantes::$GET_TODOS]);	
+	
+	Route::post(Constantes::$BUSCAR,[NotaApiController::class,Constantes::$GET_BUSCAR]);	
+	Route::post(Constantes::$SELECCIONAR, [NotaApiController::class, Constantes::$GET_SELECCIONAR]);
+	
+	Route::post(Constantes::$NUEVO,[NotaApiController::class,Constantes::$SNUEVO]);
+	Route::put(Constantes::$ACTUALIZAR,[NotaApiController::class,Constantes::$SACTUALIZAR]);
+	Route::delete(Constantes::$ELIMINAR,[NotaApiController::class,Constantes::$SELIMINAR]);
+	
+	Route::post(Constantes::$NUEVO.'s',[NotaApiController::class,Constantes::$SNUEVOS]);
+	Route::delete(Constantes::$ELIMINAR.'s',[NotaApiController::class,Constantes::$SELIMINARS]);
+	Route::put(Constantes::$ACTUALIZAR.'s',[NotaApiController::class,Constantes::$SACTUALIZARS]);	
+	Route::post(Constantes::$GUARDAR_CAMBIOS,[NotaApiController::class,Constantes::$SGUARDAR_CAMBIOS]);
+	
+	Route::post(Constantes::$GET_FKS,[NotaApiController::class,Constantes::$SGET_FKS]);
+	
+});
+
+Route::prefix(PensionApiController::$ROUTE)->group(function () {
+	
+	Route::post(Constantes::$DEFAULT,[PensionApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$INDEX,[PensionApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$TODOS,[PensionApiController::class,Constantes::$GET_TODOS]);	
+	
+	Route::post(Constantes::$BUSCAR,[PensionApiController::class,Constantes::$GET_BUSCAR]);	
+	Route::post(Constantes::$SELECCIONAR, [PensionApiController::class, Constantes::$GET_SELECCIONAR]);
+	
+	Route::post(Constantes::$NUEVO,[PensionApiController::class,Constantes::$SNUEVO]);
+	Route::put(Constantes::$ACTUALIZAR,[PensionApiController::class,Constantes::$SACTUALIZAR]);
+	Route::delete(Constantes::$ELIMINAR,[PensionApiController::class,Constantes::$SELIMINAR]);
+	
+	Route::post(Constantes::$NUEVO.'s',[PensionApiController::class,Constantes::$SNUEVOS]);
+	Route::delete(Constantes::$ELIMINAR.'s',[PensionApiController::class,Constantes::$SELIMINARS]);
+	Route::put(Constantes::$ACTUALIZAR.'s',[PensionApiController::class,Constantes::$SACTUALIZARS]);	
+	Route::post(Constantes::$GUARDAR_CAMBIOS,[PensionApiController::class,Constantes::$SGUARDAR_CAMBIOS]);
+	
+	Route::post(Constantes::$GET_FKS,[PensionApiController::class,Constantes::$SGET_FKS]);
+	
+});
+
+Route::prefix(SueldoApiController::$ROUTE)->group(function () {
+	
+	Route::post(Constantes::$DEFAULT,[SueldoApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$INDEX,[SueldoApiController::class,Constantes::$GET_INDEX]);
+	Route::post(Constantes::$TODOS,[SueldoApiController::class,Constantes::$GET_TODOS]);	
+	
+	Route::post(Constantes::$BUSCAR,[SueldoApiController::class,Constantes::$GET_BUSCAR]);	
+	Route::post(Constantes::$SELECCIONAR, [SueldoApiController::class, Constantes::$GET_SELECCIONAR]);
+	
+	Route::post(Constantes::$NUEVO,[SueldoApiController::class,Constantes::$SNUEVO]);
+	Route::put(Constantes::$ACTUALIZAR,[SueldoApiController::class,Constantes::$SACTUALIZAR]);
+	Route::delete(Constantes::$ELIMINAR,[SueldoApiController::class,Constantes::$SELIMINAR]);
+	
+	Route::post(Constantes::$NUEVO.'s',[SueldoApiController::class,Constantes::$SNUEVOS]);
+	Route::delete(Constantes::$ELIMINAR.'s',[SueldoApiController::class,Constantes::$SELIMINARS]);
+	Route::put(Constantes::$ACTUALIZAR.'s',[SueldoApiController::class,Constantes::$SACTUALIZARS]);	
+	Route::post(Constantes::$GUARDAR_CAMBIOS,[SueldoApiController::class,Constantes::$SGUARDAR_CAMBIOS]);
+	
+	Route::post(Constantes::$GET_FKS,[SueldoApiController::class,Constantes::$SGET_FKS]);
+	
+});

@@ -1,0 +1,4 @@
+//----------------------- PATH: config/app.php ---------------------
+
+"timezone" => "America/Guayaquil"
+

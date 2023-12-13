@@ -1,0 +1,27 @@
+
+	use Database\Seeders\Estructura\AlumnoSeeder;
+	use Database\Seeders\Estructura\AlumnoMateriaSeeder;
+	use Database\Seeders\Financiero\ContratoSeeder;
+	use Database\Seeders\Estructura\DocenteSeeder;
+	use Database\Seeders\Estructura\DocenteMateriaSeeder;
+	use Database\Seeders\Estructura\MateriaSeeder;
+	use Database\Seeders\Proceso\MatriculaSeeder;
+	use Database\Seeders\Proceso\NotaSeeder;
+	use Database\Seeders\Financiero\PensionSeeder;
+	use Database\Seeders\Financiero\SueldoSeeder;
+	
+	public function run(){
+		
+       	$this->call([
+            AlumnoSeeder::class,
+            AlumnoMateriaSeeder::class,
+            ContratoSeeder::class,
+            DocenteSeeder::class,
+            DocenteMateriaSeeder::class,
+            MateriaSeeder::class,
+            MatriculaSeeder::class,
+            NotaSeeder::class,
+            PensionSeeder::class,
+            SueldoSeeder::class,
+        ]);
+    }
