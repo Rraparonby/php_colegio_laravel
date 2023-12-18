@@ -1,6 +1,9 @@
 # php_colegio_laravel
 Example of Code Generation in Php
 
+## Youtube Video 
+https://www.youtube.com/watch?v=E35gkwbZXVA
+
 ## Code Generated Paths
 
 /app/Lib/Estructura/Alumno
